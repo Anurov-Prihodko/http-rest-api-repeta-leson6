@@ -1,0 +1,17 @@
+.container {
+  width: 1400px;
+}
+
+.mainTitle {
+  margin-bottom: 15px;
+  text-align: left;
+  color: #2b3c8a;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.text {
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #717579;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}

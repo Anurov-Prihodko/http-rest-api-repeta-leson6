@@ -1,0 +1,66 @@
+@import-normalize;
+
+html {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+}
+
+body {
+  background-color: #d8dadd;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  line-height: 1.33333;
+}
+
+:root {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}

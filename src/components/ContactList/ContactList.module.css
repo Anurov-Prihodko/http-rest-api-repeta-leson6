@@ -1,0 +1,44 @@
+.list {
+  width: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+.completed {
+  text-decoration: underline;
+}
+
+.pug {
+  border: none;
+  margin: 0;
+  padding: 10px 35px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: rgb(255, 237, 79);
+  cursor: pointer;
+  color: #717579;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  color: #717579;
+}
