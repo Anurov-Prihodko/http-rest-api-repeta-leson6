@@ -19,8 +19,8 @@ export class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const query = this.state.query.trim();
-    if (query === '') {
+    // const query = this.state.query.trim();
+    if (this.state.query.trim() === '') {
       return toast.error('Please enter a correct name!');
     }
     this.props.onSubmit(this.state.query);

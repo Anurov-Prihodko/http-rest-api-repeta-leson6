@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ImageGalleryItem({ item, onClick }) {
+export default function ImageGalleryItem({ images, onClick }) {
+  const { webformatURL, tags } = images;
+
   return (
     <li className="ImageGalleryItem" onClick={onClick}>
-      <img
-        src={item.webformatURL}
-        alt={item.tags}
-        className="ImageGalleryItem-image"
-      />
+      <img src={webformatURL} alt={tags} className="ImageGalleryItem-image" />
     </li>
   );
 }

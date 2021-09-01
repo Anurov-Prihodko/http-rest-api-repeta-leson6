@@ -18,7 +18,6 @@ export default class ImageGallery extends Component {
   }
 
   toggleModal = () => {
-    // REPETA
     this.setState(({ showModal }) => ({
       showModal: !showModal,
     }));
@@ -31,7 +30,7 @@ export default class ImageGallery extends Component {
           {this.props.items.map((item, index) => (
             <ImageGalleryItem
               key={index}
-              item={item}
+              images={item}
               onClick={() => {
                 this.handleClick(index);
               }}

@@ -7,6 +7,8 @@ import Searchbar from './components/Searchbar/Searchbar';
 import { fetchImages, NUMBER_OF_PHOTOS } from './services/serviceApi';
 import Button from './components/Button/Button';
 // import shortid from 'shortid';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Status = {
   PENDING: 'pending',
@@ -25,11 +27,11 @@ class App extends Component {
     status: null,
   };
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    return window.scrollY;
-  }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   return window.scrollY;
+  // }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate() {
     const { query, page, images } = this.state;
     if (this.state.status === Status.NEED_LOADING) {
       this.setState({ status: Status.PENDING });
@@ -42,7 +44,6 @@ class App extends Component {
               error: new Error(`No search results for ${query}`),
               status: Status.REJECTED,
             });
-
             return;
           }
           const isMoreAvailable = this.checkAvailability(resultsCount);
@@ -83,7 +84,6 @@ class App extends Component {
 
   render() {
     const { error, status, isMoreAvailable, images } = this.state;
-
     return (
       <div>
         <Searchbar onSubmit={this.handleSearchSubmit} />
